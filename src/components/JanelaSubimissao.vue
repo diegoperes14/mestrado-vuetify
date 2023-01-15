@@ -84,7 +84,7 @@
         name:"JanelaSubimissao",
       data () {
         return {
-          dialog: true,
+          dialog: false,
           imagem: [],
           classificacao:"",
           carregando: false,

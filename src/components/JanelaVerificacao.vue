@@ -66,11 +66,12 @@
   </template>
 
   <script>
+  import api from "@/api";
   export default {
     name:"JanelaVerificacao",
     data () {
       return {
-        dialog: false,
+        dialog: true,
         imagem: [],
         carregando: false,
         regras: {
@@ -87,15 +88,20 @@
     },
     methods:{
         enviar(){
-          console.log(!this.$refs.formulario);
           console.log("Clicou em enviar");
           this.carregando = true;
-          setTimeout(this.funcaoDeTempo, 3000);
+
+          api.post("verificar-img", {name: 'Diego', idade: 25})
+          .then(r => {
+            console.log(r.data);
+          })
+          .catch((r) => {
+            console.log(r);
+          })
+          .finally(() => {
+            this.carregando = false;
+          });
         },
-        funcaoDeTempo(){
-          this.carregando = false;
-          console.log("Já se passaram 3 segundos");
-        }
     }
   }
 </script>
