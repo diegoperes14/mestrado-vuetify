@@ -5,7 +5,7 @@
           v-model="dialog"
           persistent
           max-width="450"
-          transition="dialog-top-transition"
+          transition="dialog-bottom-transition"
         >
           <v-card :loading="carregando">
             <v-card-title class="text-h5">

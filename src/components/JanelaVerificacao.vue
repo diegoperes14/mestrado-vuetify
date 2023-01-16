@@ -88,10 +88,12 @@
     },
     methods:{
         enviar(){
-          console.log("Clicou em enviar");
           this.carregando = true;
 
-          api.post("verificar-img", {name: 'Diego', idade: 25})
+          let formdata = new FormData();
+          formdata.append('imagem', this.imagem);
+
+          api.post("verificar-img", formdata)
           .then(r => {
             console.log(r.data);
           })

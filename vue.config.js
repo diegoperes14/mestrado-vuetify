@@ -1,5 +1,4 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
+module.exports = {
   publicPath: process.env.VUE_APP_DIRETORIO_RAIZ,
   devServer: {
     proxy: process.env.VUE_APP_API_PROXY
@@ -7,4 +6,4 @@ module.exports = defineConfig({
   transpileDependencies: [
     'vuetify'
   ]
-})
+}
