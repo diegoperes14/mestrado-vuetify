@@ -37,6 +37,14 @@
             @click="abrirJanelaSubimissao"
         >SUBMETER UMA IMAGEM</v-btn>
       </v-col>
+      <v-col cols="12">
+        <v-btn
+            block
+            elevation="2"
+            color="error"
+            @click="abrirJanelaResultados"
+        >RESULTADO</v-btn>
+      </v-col>
     </v-row>
   <JanelaVerificacao
     ref="JanelaVerificacao"
@@ -44,17 +52,22 @@
   <JanelaSubimissao
     ref="JanelaSubimissao"
   ></JanelaSubimissao>
+  <JanelaResultados
+    ref="JanelaResultados"
+  ></JanelaResultados>
   </v-container>
 </template>
 
 <script>
   import JanelaVerificacao from '@/components/JanelaVerificacao.vue';
   import JanelaSubimissao from '@/components/JanelaSubimissao.vue';
+  import JanelaResultados from '@/components/JanelaResultados.vue';
   export default {
     name: 'PaginaPrincipal',
     components:{
       JanelaVerificacao,
-      JanelaSubimissao
+      JanelaSubimissao,
+      JanelaResultados
     },
     data: () => ({
 
@@ -67,6 +80,11 @@
       abrirJanelaSubimissao(){
         this.$refs.JanelaSubimissao.dialog = true;
         console.log("Abrir Janela Submissao");
+      },
+
+      abrirJanelaResultados(){
+        this.$refs.JanelaResultados.dialog = true;
+        console.log("Abrir Janela Resultados");
       },
 
     }

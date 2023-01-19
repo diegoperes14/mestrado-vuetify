@@ -71,7 +71,7 @@
     name:"JanelaVerificacao",
     data () {
       return {
-        dialog: true,
+        dialog: false,
         imagem: [],
         carregando: false,
         regras: {
@@ -93,7 +93,9 @@
           let formdata = new FormData();
           formdata.append('imagem', this.imagem);
 
-          api.post("verificar-img", formdata)
+          api.post("verificar-img", formdata, {
+            timeout: 120000 // Tempo de espera em milissegundos (Dois Minutos)
+          })
           .then(r => {
             console.log(r.data);
           })
