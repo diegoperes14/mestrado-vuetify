@@ -75,16 +75,13 @@
     methods:{
       abrirJanelaVerificacao(){
         this.$refs.JanelaVerificacao.dialog = true;
-        console.log("Abrir Janela Verificacao");
       },
       abrirJanelaSubimissao(){
         this.$refs.JanelaSubimissao.dialog = true;
-        console.log("Abrir Janela Submissao");
       },
 
       abrirJanelaResultados(){
         this.$refs.JanelaResultados.dialog = true;
-        console.log("Abrir Janela Resultados");
       },
 
     }
