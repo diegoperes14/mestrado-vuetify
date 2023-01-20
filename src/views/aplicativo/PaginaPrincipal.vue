@@ -43,7 +43,7 @@
             elevation="2"
             color="error"
             @click="abrirJanelaResultados"
-        >RESULTADO</v-btn>
+        >RESULTADO*</v-btn>
       </v-col>
     </v-row>
   <JanelaVerificacao
