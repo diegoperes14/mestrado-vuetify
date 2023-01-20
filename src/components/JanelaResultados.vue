@@ -94,6 +94,7 @@
       data () {
         return {
           dialog: false,
+          carregando: false,
           texto_bordas: 'A lesão segmentada apresenta bordas relativamente regulares, não fugindo do padão visto em histogramas de lesões benignas, espalhando-se pouco além das fronteiras atuais.',
           texto_cores: ' O número de cores identificadas na lesão foi de aproximadamente 10 mil, o que corresponde a um número alto de cores para uma lesão de pele. Isso significa que é possível que a lesão evolua para algo sério, portanto é importante tomar cuidado quando a evolução.',
           texto_assimetria: 'Lesão de Aparência simétrica, indicando uma evolução homogênea de suas bordas até o presente momento.',

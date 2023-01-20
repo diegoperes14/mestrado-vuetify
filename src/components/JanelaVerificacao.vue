@@ -28,6 +28,10 @@
             </li>
             <v-row>
                 <v-col>
+                    <v-alert
+                      v-if="carregando"
+                      type="info"
+                    >Por favor, aguarde...</v-alert>
                     <v-file-input
                     accept="image/*"
                     label="Lesão"
