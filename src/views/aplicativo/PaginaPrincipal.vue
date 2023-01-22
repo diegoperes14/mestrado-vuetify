@@ -42,7 +42,6 @@
             block
             elevation="2"
             color="error"
-            @click="abrirJanelaResultados"
         >RESULTADO*</v-btn>
       </v-col>
     </v-row>
@@ -54,6 +53,7 @@
   ></JanelaSubimissao>
   <JanelaResultados
     ref="JanelaResultados"
+    @exibirResultados="abrirJanelaResultados"
   ></JanelaResultados>
   </v-container>
 </template>
@@ -70,7 +70,7 @@
       JanelaResultados
     },
     data: () => ({
-
+      resultados: {},
     }),
     methods:{
       abrirJanelaVerificacao(){
@@ -81,7 +81,10 @@
       },
 
       abrirJanelaResultados(){
-        this.$refs.JanelaResultados.dialog = true;
+        console.log('Resultados: ')
+        //console.log(resultados)
+        //this.resultados = resultados;
+        //this.$refs.JanelaResultados.mostrarResultados(this.resultados);
       },
 
     }

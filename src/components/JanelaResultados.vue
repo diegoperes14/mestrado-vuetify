@@ -22,7 +22,7 @@
                         width="250"
                     />
                     <p class="text-justify">
-                        {{texto_bordas}}
+                        {{resultados.texto_bordas}}
                     </p>
                 </v-col>
             </v-row>
@@ -37,7 +37,7 @@
                         width="250"
                     />
                     <p class="text-justify">
-                        {{texto_assimetria}}
+                        {{resultados.texto_assimetria}}
                     </p>
                 </v-col>
             </v-row>
@@ -52,7 +52,7 @@
                         width="250"
                     />
                     <p class="text-justify">
-                        {{texto_cores}}
+                        {{resultados.texto_cores}}
                     </p>
                 </v-col>
             </v-row>
@@ -61,7 +61,7 @@
                 <v-col cols="12">
                     <h3>Diagnóstico</h3>
                     <p class="text-justify">
-                        {{texto_diagnóstico}}
+                        {{resultados.texto_diagnóstico}}
                     </p>
                 </v-col>
             </v-row>
@@ -95,14 +95,24 @@
         return {
           dialog: false,
           carregando: false,
-          texto_bordas: 'A lesão segmentada apresenta bordas relativamente regulares, não fugindo do padão visto em histogramas de lesões benignas, espalhando-se pouco além das fronteiras atuais.',
-          texto_cores: ' O número de cores identificadas na lesão foi de aproximadamente 10 mil, o que corresponde a um número alto de cores para uma lesão de pele. Isso significa que é possível que a lesão evolua para algo sério, portanto é importante tomar cuidado quando a evolução.',
-          texto_assimetria: 'Lesão de Aparência simétrica, indicando uma evolução homogênea de suas bordas até o presente momento.',
-          texto_diagnóstico: 'Conforme os dados obtidos a partir treinamento de aprendizado de máquina, é calculado uma probabilidade de 34% de esta lesão ser do tipo maligna, portanto, recomenda-se a procura por um especialista em dermatologia para acompanhar a evolução desta lesão e o devido tratamento caso necessáro.',
+          resultados:{
+            classificacao: '',
+            imagem_mascarada: '',
+            imagem_medidas: '',
+            imagem_resultado: '',
+            texto_assimetria: '',
+            texto_bordas: '',
+            texto_cores: '',
+            texto_diagnóstico: '',
+          },
         }
       },
       methods:{
-
+        mostrarResultados(resultados){
+          console.log('Chegou na tela de resultados');
+          this.dialog = true;
+          this.resultados = resultados;
+        }
       }
     }
   </script>

@@ -102,6 +102,9 @@
           })
           .then(r => {
             console.log(r.data);
+            this.$emit('exibirResultados');
+            this.dialog = false;
+            //$emit('exibirResultados', r.data);
           })
           .catch((r) => {
             console.log(r);
