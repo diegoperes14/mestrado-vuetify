@@ -37,23 +37,16 @@
             @click="abrirJanelaSubimissao"
         >SUBMETER UMA IMAGEM</v-btn>
       </v-col>
-      <v-col cols="12">
-        <v-btn
-            block
-            elevation="2"
-            color="error"
-        >RESULTADO*</v-btn>
-      </v-col>
     </v-row>
   <JanelaVerificacao
     ref="JanelaVerificacao"
+    @exibirResultados="abrirJanelaResultados"
   ></JanelaVerificacao>
   <JanelaSubimissao
     ref="JanelaSubimissao"
   ></JanelaSubimissao>
   <JanelaResultados
     ref="JanelaResultados"
-    @exibirResultados="abrirJanelaResultados"
   ></JanelaResultados>
   </v-container>
 </template>
@@ -80,11 +73,9 @@
         this.$refs.JanelaSubimissao.dialog = true;
       },
 
-      abrirJanelaResultados(){
-        console.log('Resultados: ')
-        //console.log(resultados)
-        //this.resultados = resultados;
-        //this.$refs.JanelaResultados.mostrarResultados(this.resultados);
+      abrirJanelaResultados(resultados){
+        this.resultados = resultados;
+        this.$refs.JanelaResultados.mostrarResultados(this.resultados);
       },
 
     }

@@ -50,7 +50,7 @@
               color="green darken-1"
               text
               :loading="carregando"
-              @click="dialog = false"
+              @click="fechar"
             >
               Cancelar
             </v-btn>
@@ -101,10 +101,8 @@
             timeout: 120000 // Tempo de espera em milissegundos (Dois Minutos)
           })
           .then(r => {
-            console.log(r.data);
-            this.$emit('exibirResultados');
             this.dialog = false;
-            //$emit('exibirResultados', r.data);
+            this.$emit('exibirResultados', r.data);
           })
           .catch((r) => {
             console.log(r);
@@ -113,6 +111,10 @@
             this.carregando = false;
           });
         },
+        fechar(){
+          this.imagem = [];
+          this.dialog = false;
+        }
     }
   }
 </script>

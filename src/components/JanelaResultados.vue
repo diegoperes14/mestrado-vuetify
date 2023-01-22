@@ -14,9 +14,9 @@
 
               <v-row>
                 <v-col cols="12">
-                    <h3>Contorno</h3>
+                    <h3>Lesão Identificada</h3>
                     <v-img
-                        :src="require('@/assets/resultados-placeholders/Contorno.jpg')"
+                        :src="resultados.imagem_mascarada"
                         class="mx-auto"
                         contain
                         width="250"
@@ -31,7 +31,7 @@
                 <v-col cols="12">
                     <h3>Medidas</h3>
                     <v-img
-                        :src="require('@/assets/resultados-placeholders/Medidas.jpg')"
+                        :src="resultados.imagem_medidas"
                         class="mx-auto"
                         contain
                         width="250"
@@ -46,7 +46,7 @@
                 <v-col cols="12">
                     <h3>Resultado Final</h3>
                     <v-img
-                        :src="require('@/assets/resultados-placeholders/Resultado.jpg')"
+                        :src="resultados.imagem_resultado"
                         class="mx-auto"
                         contain
                         width="250"
@@ -65,10 +65,6 @@
                     </p>
                 </v-col>
             </v-row>
-
-
-
-
   
             </v-card-text>
             <v-card-actions>
@@ -77,7 +73,7 @@
                 color="green darken-1"
                 text
                 :loading="carregando"
-                @click="dialog = false"
+                @click="fechar"
               >
                 Sair
               </v-btn>
@@ -109,9 +105,21 @@
       },
       methods:{
         mostrarResultados(resultados){
-          console.log('Chegou na tela de resultados');
           this.dialog = true;
           this.resultados = resultados;
+        },
+        fechar(){
+          this.resultados = {
+            classificacao: '',
+            imagem_mascarada: '',
+            imagem_medidas: '',
+            imagem_resultado: '',
+            texto_assimetria: '',
+            texto_bordas: '',
+            texto_cores: '',
+            texto_diagnóstico: '',
+          };
+          this.dialog = false;
         }
       }
     }
