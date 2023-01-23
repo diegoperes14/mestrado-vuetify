@@ -31,6 +31,7 @@
 
       <v-col cols="12">
         <v-btn
+            disabled
             block
             elevation="2"
             color="primary"
