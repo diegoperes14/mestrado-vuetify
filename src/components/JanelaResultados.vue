@@ -59,9 +59,9 @@
 
             <v-row>
                 <v-col cols="12">
-                    <h3>Diagnóstico</h3>
+                    <h3>Resultado da Análise</h3>
                     <p class="text-justify">
-                        {{resultados.texto_diagnóstico}}
+                        {{resultados.texto_resultado_analise}}
                     </p>
                 </v-col>
             </v-row>
@@ -99,7 +99,7 @@
             texto_assimetria: '',
             texto_bordas: '',
             texto_cores: '',
-            texto_diagnóstico: '',
+            texto_resultado_analise: '',
           },
         }
       },
