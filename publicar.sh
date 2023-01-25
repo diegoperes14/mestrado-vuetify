@@ -1,7 +1,13 @@
 
 npm run build
 
+cd build
+
+git pull origin main
+
 rm -R css img js favicon.ico index.html
+
+cd ..
 
 cp -R dist/* build
 
