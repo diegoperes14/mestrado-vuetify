@@ -1,6 +1,6 @@
 # mestrado-vuetify
 
-## Project setup
+## Project setup 
 ```
 npm install
 ```
