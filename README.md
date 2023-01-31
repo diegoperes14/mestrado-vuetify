@@ -20,5 +20,7 @@ npm run build
 npm run lint
 ```
 
+# Compile para apk utilizando o cordova
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
