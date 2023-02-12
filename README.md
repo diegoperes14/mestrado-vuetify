@@ -1,4 +1,5 @@
 # mestrado-vuetify
+Este projeto irá consumir a API em python
 
 ## Project setup 
 ```
