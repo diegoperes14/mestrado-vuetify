@@ -1,5 +1,5 @@
 # mestrado-vuetify
-Este projeto irá consumir a API em python
+Este projeto irá consumir a API em python, enviará uma imagem que será processada.
 
 ## Project setup 
 ```
