@@ -1,5 +1,6 @@
 # mestrado-vuetify
 Este projeto irá consumir a API em python, enviará uma imagem que será processada.
+A Api retornará as imagens segmentadas, a classificação dada pela Rede Neural Perceptron de Múltiplas camadas.
 
 ## Project setup 
 ```
